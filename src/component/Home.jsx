@@ -22,11 +22,11 @@ const Home = () => {
   return (
     <div>
       <div className="container">
-        <input type='text' class="form-control" aria-label="Disabled input example" placeholder="Filter/ Category " onChange={(e) => setsearchtitle(e.target.value)} style={{width:"300px",marginTop:"20px"}} />
+        <input type='text' className="form-control" aria-label="Disabled input example" placeholder="Filter/ Category " onChange={(e) => setsearchtitle(e.target.value)} style={{width:"300px",marginTop:"20px"}} />
         <div className="row g-5  mt-3">
           {data &&
             data.filter((value) => {
-              if (searchtitle == "") {
+              if (searchtitle === "") {
                 return value
               } else if (value.category.toLowerCase().includes(searchtitle.toLowerCase())) {
                 return value
